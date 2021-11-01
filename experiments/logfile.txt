@@ -1,0 +1,22 @@
+INFO  HAL.Ctr Opening first available FPGA board
+INFO  HAL.Ctr Config successfully loaded from file /home/fp09/fpuser2134/spikeyhal/config/station539.cfg
+INFO  PyN.wks Using station station539
+INFO  HAL.Spi Found Spikey 5.
+INFO  PyN.cfg Calibrations NeuronMems Icb TauMem bioDynrange NOT loaded!
+INFO  HAL.PyS Hardware config written (enable loglevel 3 to list parameter names)
+WARN  PyN.cfg Biological voltages larger than -55 mV (excitatory reversal potential excluded) may not be supported by the utilized chip! (One reference voltage for hardware neuron 0 on block 0 has value -50.0)
+INFO  PyN.cfg Monitoring hardware neuron 0 (on membrane readout pin 0)
+WARN  HAL.Cal vout#37 set to 0.02 but valid range is: 0.1073 - 1.715
+WARN  HAL.Cal vout#38 set to 0.02 but valid range is: 0.1012 - 1.715
+WARN  HAL.Cal vout#12 set to 0.02 but valid range is: 0.1235 - 1.716
+WARN  HAL.Cal vout#13 set to 0.02 but valid range is: 0.09141 - 1.711
+WARN  HAL.PRC Pram refresh time too long for precise Dac voltage values larger than 600!
+INFO  HAL.PyS Hardware config written (enable loglevel 3 to list parameter names)
+INFO  PyN.syn ### Hardware run 00000000 - Tsim = 200.0 ###
+INFO  Default Connected to USB board.
+INFO  PyN.cfg Transfer data to hardware system.
+INFO  PyN.cfg Trigger network emulation.
+INFO  PyN.cfg Receive spike data.
+INFO  PyN.syn Receive membrane data.
+INFO  PyN.syn Transforming membrane data.
+INFO  PyN.syn Network emulation finished.
