@@ -685,23 +685,40 @@ InhExc&0 $\cdot$ pynn.minInhWeight()
 
 
 \subsection{Aufgabe 2}
-Mit einer kleineren Anzahl an Neuronen je Population kann die Kettenlänge und die Dauer der Netzwerkaktivität erhöht werden.
-maximal chain length: 2exc, 1inh --> length: 64 populations
-Which hardware feature limits the min nbr of neurons in each population --> lukas
-What is the maximal chain length that you can produce?
+Mit einer kleineren Anzahl an Neuronen je Population kann die Kettenlänge und die Dauer der Netzwerkaktivität maximiert werden. Eine maximale Dauer 
+ergibt sich mit zwei exibitorischen und einem inhibitorischem Neuron je Population bei einer Gesamtlänge von 64 Populationen. Durch Anpassen der Parameter wurde versucht der Auffächerung entgegenzuwirken. Das beste Ergebnis konnte mit folgenden Einstellungen erzielt werden und ist in Abbildung \ref{fig:abb10} dargestellt.
 
+\begin{table}[H]
+\centering
+\captionsetup{justification=centering}
+\caption{Synfire-Chain maximaler Länge}
+\begin{tabular}{l|l}
+ Gewicht&Wert\\
+\hline
+StimExcExc&5 $\cdot$ pynn.minExcWeight()\\
+StimExcInh&4 $\cdot$ pynn.minExcWeight()\\
+ExcExc&3 $\cdot$ pynn.minExcWeight()\\
+ExcInh&2 $\cdot$ pynn.minExcWeight()\\
+InhExc&15 $\cdot$ pynn.minInhWeight()
+\end{tabular}
+\label{tab:07}
+\end{table}
 
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb4}
-\caption{df}
+\caption{Synfire-Chain maximaler Länge}
 \includegraphics[scale=0.35]{pictures/chainlength_64.png}
 \end{center}
 \end{figure}
 
-Die starke Auffächerung der Kette lässt sich durch die starke 
+\noindent Die starke Auffächerung der Kette lässt sich durch die starke Anregung bei fehlenden inhibitorischen Zellen erklären. Bis zum Ende der Refraktärzeit ist das anregende EPSP an der Zelle noch nicht abgeklungen, sodass diese nochmals feuert. 
+
 \subsection{Aufgabe 3}
-Wir schließen die Synfire-Chain, indem wir die letzte Population an Neuronen mit der ersten verbinden.
+Wir schließen die Synfire-Chain, indem wir die letzte Population an Neuronen mit der ersten verbinden. Das beobachtete Verhalten ist in Abbildung \ref{fig:abb10} dargestellt.
+
+\newpage
+
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb4}
@@ -710,20 +727,16 @@ Wir schließen die Synfire-Chain, indem wir die letzte Population an Neuronen mi
 \end{center}
 \end{figure}
 
-Record 4 hardware neurons on the oszi from ascending populations (see the temporal difference):
-ecord 4 hardware neurons on the oscilloscope from ascending populations to see the
-temporal difference of the arriving PSPs on the membranes and observe the timing of
-the arriving excitatory stimulus and the feed-forward inhibition. Convince yourself that
-the activity is sustained even after the software run completed.
-
+\noindent In Abbildung \ref{fig:abb10} sieht man die zeitliche Differenz der eintreffenden PSPs auf den Membranen, woraus man gut das Timing des eintreffenden erregenden Stimulus und der Feedforward-Hemmung beobachten kann.
 
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb4}
-\caption{Aktivität der Synfire-Kette mit abgestellter Inhibition einschließlich des Membranpotenzials des Neurons mit ID=0}
+\caption{PSPs von 4 Hardware-Neuronen}
 \includegraphics[scale=0.05]{pictures/oszilloskop_pic_3.jpg}
 \end{center}
 \end{figure}
+
 
 \newpage
 
@@ -786,13 +799,10 @@ w = 2, k = 10
 
 
 \section{Eine einfache Berechnung - XOR}
-
+Im letzten Versuchsteil soll ein XOR-Gatter implementiert werden.
 
 \subsection{Aufgabe 1}
-Assume that everything works perfectly (i.e. all neurons work and each input spike
-triggers exactly one output spike). Can you come up with a smaller network that can
-perform this task, given that each neuron can only have either excitatory or inhibitory
-synapses? Draw a network circuit diagram.
+Wir nehmen an, dass alle Neuronen funktionieren und jeder Eingangsimpuls löst genau eine Ausgangsimpuls aus.Draw a network circuit diagram.
 smaller network --> Lukas
 
 \subsection{Aufgabe 2}
