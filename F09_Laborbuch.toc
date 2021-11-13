@@ -24,12 +24,12 @@
 \contentsline {subsection}{\numberline {5.1}Aufgabe 1}{16}{subsection.5.1}
 \contentsline {subsection}{\numberline {5.2}Aufgabe 2}{17}{subsection.5.2}
 \contentsline {subsection}{\numberline {5.3}Aufgabe 3}{17}{subsection.5.3}
-\contentsline {section}{\numberline {6}Rekurrente Netzwerke}{18}{section.6}
-\contentsline {subsection}{\numberline {6.1}Aufgabe 1}{18}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Aufgabe 2}{18}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Aufgabe 3}{18}{subsection.6.3}
-\contentsline {section}{\numberline {7}Eine einfache Berechnung - XOR}{19}{section.7}
-\contentsline {subsection}{\numberline {7.1}Aufgabe 1}{19}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Aufgabe 2}{19}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Aufgabe 3}{19}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}Aufgabe 4}{20}{subsection.7.4}
+\contentsline {section}{\numberline {6}Rekurrente Netzwerke}{19}{section.6}
+\contentsline {subsection}{\numberline {6.1}Aufgabe 1}{19}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Aufgabe 2}{19}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Aufgabe 3}{19}{subsection.6.3}
+\contentsline {section}{\numberline {7}Eine einfache Berechnung - XOR}{21}{section.7}
+\contentsline {subsection}{\numberline {7.1}Aufgabe 1}{21}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Aufgabe 2}{21}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Aufgabe 3}{21}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Aufgabe 4}{21}{subsection.7.4}

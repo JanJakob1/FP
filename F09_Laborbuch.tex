@@ -615,7 +615,7 @@ Wir schalten in den falilating mode ($\tau_{rec} = 0$) und untersuchen analog da
 
 
 \section{Feed-Forward Netzwerke}
-Wir untersuchen ein neuronales Netz am Beispiel einer vorwärts gerichteten Synfire Chain. Der Aufbau erfolgt gemäß Abbildung \ref{fig:abb11100}. Die Kettenglieder sind Populationen und bestehene aus einer gewissen Anzahl Neuronen. Jede Population ist jeweils mit der nächsten Population verbunden. Eine Gruppe (Spalte) feuert dabei immer synchron. Die inhibitorischen Neuronen verhindern ein Doppelfeuern der exzitatorischen. 
+Wir untersuchen ein neuronales Netz am Beispiel einer vorwärts gerichteten Synfire Chain. Der Aufbau erfolgt gemäß Abbildung \ref{fig:abb11100}. Die Kettenglieder sind Populationen und bestehen aus einer gewissen Anzahl an Neuronen. Jede Population ist jeweils mit der nächsten Population verbunden. Eine Gruppe (Spalte) feuert dabei immer synchron. Die inhibitorischen Neuronen verhindern ein Doppelfeuern der exzitatorischen. 
 
 \begin{figure} [ht]
 \begin{center}
@@ -626,10 +626,43 @@ Wir untersuchen ein neuronales Netz am Beispiel einer vorwärts gerichteten Synf
 \end{figure}
 
 \subsection{Aufgabe 1}
+Das Feuerverhalten der Synfire-Chain hängt maßgeblich von den synaptischen Gewichten ab. Um das in Abbildung \ref{fig:abb10} dargestellte Verhalten zu produzieren, haben wir folgende Gewichte verwendet:
 
-Die exc-exc scheint die sensitivste Verbindung zu sein, da dort das weight am niedrigsten eingestellt werden musste. 
+\begin{table}[H]
+\centering
+\captionsetup{justification=centering}
+\caption{Verbindungsgewichte Synfire-Chain}
+\begin{tabular}{l|l}
+ Gewicht&Wert\\
+\hline
+StimExcExc&5 $\cdot$ pynn.minExcWeight()\\
+StimExcInh&5 $\cdot$ pynn.minExcWeight()\\
+ExcExc&5 $\cdot$ pynn.minExcWeight()\\
+ExcInh&5 $\cdot$ pynn.minExcWeight()\\
+InhExc&5 $\cdot$ pynn.minInhWeight()
+\end{tabular}
+\label{tab:05}
+\end{table}
 
+\noindent Die exc-exc scheint die sensitivste Verbindung zu sein, da dort das Gewicht am niedrigsten eingestellt werden musste und kleine Veränderungen des Gewichts einen hohen Einfluss auf das Feuerverhalten der Synfire-Chain hatten. Die inhibitorischen Neuronen kann man mit folgenden Gewichtseinstellungen deaktivieren:
 
+\begin{table}[H]
+\centering
+\captionsetup{justification=centering}
+\caption{Verbindungsgewichte bei deaktivierter Inhibition}
+\begin{tabular}{l|l}
+ Gewicht&Wert\\
+\hline
+StimExcExc&5 $\cdot$ pynn.minExcWeight()\\
+StimExcInh&0 $\cdot$ pynn.minExcWeight()\\
+ExcExc&5 $\cdot$ pynn.minExcWeight()\\
+ExcInh&0 $\cdot$ pynn.minExcWeight()\\
+InhExc&0 $\cdot$ pynn.minInhWeight()
+\end{tabular}
+\label{tab:06}
+\end{table}
+
+\noindent Mit diesen Gewichten erhält man das in Abbildung \ref{fig:abb10} dargestellte Verhalten.
 
 \begin{figure} [ht]
 \begin{center}
@@ -642,17 +675,21 @@ Die exc-exc scheint die sensitivste Verbindung zu sein, da dort das weight am ni
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb4}
-\caption{Aktivität der Synfire-Kette mit abgestellter Inhibition}
+\caption{Aktivität der Synfire-Kette mit deaktivierter Inhibition}
 \includegraphics[scale=0.35]{pictures/synfire_chain_disable_inhibition.png}
 \end{center}
 \end{figure}
 
 
+\newpage 
+
+
 \subsection{Aufgabe 2}
+Mit einer kleineren Anzahl an Neuronen je Population kann die Kettenlänge und die Dauer der Netzwerkaktivität erhöht werden.
 maximal chain length: 2exc, 1inh --> length: 64 populations
 Which hardware feature limits the min nbr of neurons in each population --> lukas
 What is the maximal chain length that you can produce?
-Mit einer kleineren Anzahl an Neuronen je Population kann die Kettenlänge und die Dauer der Netzwerkaktivität erhöht werden.
+
 
 \begin{figure} [ht]
 \begin{center}
@@ -664,11 +701,11 @@ Mit einer kleineren Anzahl an Neuronen je Population kann die Kettenlänge und d
 
 
 \subsection{Aufgabe 3}
-
+Wir schließen die Synfire-Chain, indem wir die letzte Population an Neuronen mit der ersten verbinden.
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb4}
-\caption{Aktivität der Synfire-Kette mit in einer Loop-Konfiguration, in der die letzte Population die erste stimuliert}
+\caption{Loop-Konfiguration}
 \includegraphics[scale=0.35]{pictures/synfire_chain_loop.png}
 \end{center}
 \end{figure}
