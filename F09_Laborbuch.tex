@@ -415,10 +415,10 @@ In dieser Aufgabe untersuchen wir die Hardware-Implementierung der Kurzzeitplast
 \subsection{Aufgabe 1}
 Wir starten mit dem depressing mode ($\tau_{fac} = 0$). Wir beobachten folgendes Verhalten:
 \begin{itemize}
-\item Verkleinert man die die spike distance, 
+\item Verkleinert man die die spike distance, desto schneller erfolgt der Abfall des ersten Peaks zu einem stationären Plateau und je keiner die spike distance, desto größer der Wert dieses Plateaus. Dieses Verhalten liegt nahe, wurde aber nicht beobachtet, da wir anfänglich $\tau_{rec}$ zu klein gewählt haben. Hier spielen zwei konträre Effekte eine Rolle: Durch eine kürzere spiking distance ist zwar jeder einzelne Peak kleiner (da stärker unterdrückt), aber durch Summation ist das Gesamtpotential wieder größer.
 \item Je größer die final spike distance, desto größer ist der letzte Peak (weniger stark depressed).
-\item Verringert man die Utilization $U$ so werden die Werte der PSP-Höhen größer und fallen schneller ab.
-\item Verkleinert man $\tau_{rec}$
+\item Vergrößert man die Utilization $U$ so werden die Werte der PSP-Höhen größer und fallen schneller ab.
+\item Umso größer man $\tau_{rec}$ wählt, desto stärker wird der letzte Peak unterdrückt und desto schneller fällt die Amplitude auf den stationären Fall ab.
 \end{itemize} 
 
 \begin{figure} [ht]
@@ -495,7 +495,7 @@ Wir starten mit dem depressing mode ($\tau_{fac} = 0$). Wir beobachten folgendes
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb19}
-\caption{$t_{rec}$: 100.0ms, final spike distance: 200.0ms, U: 0.6, spike distance: 100.0ms}
+\caption{$\tau_{rec}$: 100.0ms, final spike distance: 200.0ms, U: 0.6, spike distance: 100.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_9.pdf} 
 \end{center}
 \end{figure}
@@ -503,7 +503,7 @@ Wir starten mit dem depressing mode ($\tau_{fac} = 0$). Wir beobachten folgendes
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb20}
-\caption{$t_{rec}$: 150.0ms, final spike distance: 200.0ms, U: 0.6, spike distance: 100.0ms}
+\caption{$\tau_{rec}$: 150.0ms, final spike distance: 200.0ms, U: 0.6, spike distance: 100.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_10.pdf} 
 \end{center}
 \end{figure}
@@ -513,31 +513,39 @@ Wir starten mit dem depressing mode ($\tau_{fac} = 0$). Wir beobachten folgendes
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb21}
-\caption{$t_{rec}$: 200.0ms, final spike distance: 200.0ms, U: 0.6, spike distance: 100.0ms}
+\caption{$\tau_{rec}$: 200.0ms, final spike distance: 200.0ms, U: 0.6, spike distance: 100.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_11.pdf} 
 \end{center}
 \end{figure}
 
+
+\subsection{Aufgabe 2}
+Wird STP deaktiviert, so ist der erste Peak kleiner als die nachfolgenden.
+
+
+\subsection{Aufgabe 3}
+Wir schalten in den falilating mode ($\tau_{rec} = 0$) und untersuchen analog das Verhalten des Membranpotentials. Wir beobachten folgendes Verhalten:
+\begin{itemize}
+\item Verringert man die spike distance, so erhält man durch Summation der einzelnen Peaks einen höheren Wert für die Peaks des Membranpotentials.
+\item Je kleiner die final spike distance, desto größer ist der letzte Peak, da er noch stärker begünstigt wird.
+\item Verkleinert man die Utilization $U$, so werden die Werte der PSP-Höhen größer und fallen schneller ab.
+\item Umso größer man $\tau_{fac}$ wählt, desto stärker wird der letzte Peak verstärkt.
+\end{itemize} 
+
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb22}
-\caption{spike distance: 300.0ms, $t_{fac}$: 100.0ms, U: 0.8, final spike distance: 300.0ms}
+\caption{spike distance: 300.0ms, $\tau_{fac}$: 100.0ms, U: 0.8, final spike distance: 300.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_12.pdf} 
 \end{center}
 \end{figure}
 
-\subsection{Aufgabe 2}
-dfdfdf
-
-
-\subsection{Aufgabe 3}
-Wir schalten in den falilating mode und untersuchen analog das Verhalten des Membranpotentials ....
-
+\newpage
 
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb23}
-\caption{spike distance: 100.0ms, $t_{fac}$; 100.0ms, U: 0.8, final spike distance: 300.0ms}
+\caption{spike distance: 100.0ms, $\tau_{fac}$: 100.0ms, U: 0.8, final spike distance: 300.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_13.pdf} 
 \end{center}
 \end{figure}
@@ -545,7 +553,7 @@ Wir schalten in den falilating mode und untersuchen analog das Verhalten des Mem
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb24}
-\caption{final spike distance: 100.0, $t_{fac}$, 150.0, U: 0.6, spike distance: 100.0ms}
+\caption{final spike distance: 100.0ms, $\tau_{fac}$, 150.0, U: 0.6, spike distance: 100.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_14.pdf} 
 \end{center}
 \end{figure}
@@ -553,15 +561,17 @@ Wir schalten in den falilating mode und untersuchen analog das Verhalten des Mem
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb25}
-\caption{final spike distance: 300.0ms, $t_{fac}$: 150.0ms, U: 0.6, spike distance: 100.0ms}
+\caption{final spike distance: 300.0ms, $\tau_{fac}$: 150.0ms, U: 0.6, spike distance: 100.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_15.pdf} 
 \end{center}
 \end{figure}
 
+\newpage
+
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb26}
-\caption{final spike distance: 500.0ms, $t_{fac}$: 150.0ms, U: 0.6, spike distance: 100.0ms}
+\caption{final spike distance: 500.0ms, $\tau_{fac}$: 150.0ms, U: 0.6, spike distance: 100.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_16.pdf} 
 \end{center}
 \end{figure}
@@ -569,7 +579,7 @@ Wir schalten in den falilating mode und untersuchen analog das Verhalten des Mem
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb27}
-\caption{U: 0.4, $t_{fac}$: 100.0ms, spike distance: 100.0ms, final spike distance: 300.0ms}
+\caption{U: 0.4, $\tau_{fac}$: 100.0ms, spike distance: 100.0ms, final spike distance: 300.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_17.pdf} 
 \end{center}
 \end{figure}
@@ -577,15 +587,17 @@ Wir schalten in den falilating mode und untersuchen analog das Verhalten des Mem
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb28}
-\caption{U: 0.8, $t_{fac}$: 100.0ms, spike distance: 100.0ms, final spike distance: 300.0ms}
+\caption{U: 0.8, $\tau_{fac}$: 100.0ms, spike distance: 100.0ms, final spike distance: 300.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_18.pdf} 
 \end{center}
 \end{figure}
 
+\newpage
+
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb29}
-\caption{$t_{fac}$: 50.0ms, U: 0.6, spike distance: 100.0ms, final spike distance: 300.0ms}
+\caption{$\tau_{fac}$: 50.0ms, U: 0.6, spike distance: 100.0ms, final spike distance: 300.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_19.pdf} 
 \end{center}
 \end{figure}
@@ -593,7 +605,7 @@ Wir schalten in den falilating mode und untersuchen analog das Verhalten des Mem
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb30}
-\caption{$t_{fac}$: 200.0ms, U: 0.6, spike distance: 100.0ms, final spike distance: 300.0ms}
+\caption{$\tau_{fac}$: 200.0ms, U: 0.6, spike distance: 100.0ms, final spike distance: 300.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_20.pdf} 
 \end{center}
 \end{figure}
