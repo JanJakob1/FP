@@ -635,16 +635,16 @@ Das Feuerverhalten der Synfire-Chain hängt maßgeblich von den synaptischen Gew
 \begin{tabular}{l|l}
  Gewicht&Wert\\
 \hline
-StimExcExc&5 $\cdot$ pynn.minExcWeight()\\
-StimExcInh&5 $\cdot$ pynn.minExcWeight()\\
-ExcExc&5 $\cdot$ pynn.minExcWeight()\\
-ExcInh&5 $\cdot$ pynn.minExcWeight()\\
-InhExc&5 $\cdot$ pynn.minInhWeight()
+StimExcExc&2 $\cdot$ pynn.minExcWeight()\\
+StimExcInh&2 $\cdot$ pynn.minExcWeight()\\
+ExcExc&2 $\cdot$ pynn.minExcWeight()\\
+ExcInh&1 $\cdot$ pynn.minExcWeight()\\
+InhExc&15 $\cdot$ pynn.minInhWeight()
 \end{tabular}
 \label{tab:05}
 \end{table}
 
-\noindent Die exc-exc scheint die sensitivste Verbindung zu sein, da dort das Gewicht am niedrigsten eingestellt werden musste und kleine Veränderungen des Gewichts einen hohen Einfluss auf das Feuerverhalten der Synfire-Chain hatten. Die inhibitorischen Neuronen kann man mit folgenden Gewichtseinstellungen deaktivieren:
+\noindent Die exc-exc scheint die sensitivste Verbindung zu sein, da hier kleine Veränderungen des Gewichts einen sehr hohen Einfluss auf das Feuerverhalten der Synfire-Chain hatten. Die inhibitorischen Neuronen kann man mit folgenden Gewichtseinstellungen deaktivieren:
 
 \begin{table}[H]
 \centering
@@ -653,16 +653,16 @@ InhExc&5 $\cdot$ pynn.minInhWeight()
 \begin{tabular}{l|l}
  Gewicht&Wert\\
 \hline
-StimExcExc&5 $\cdot$ pynn.minExcWeight()\\
+StimExcExc&2 $\cdot$ pynn.minExcWeight()\\
 StimExcInh&0 $\cdot$ pynn.minExcWeight()\\
-ExcExc&5 $\cdot$ pynn.minExcWeight()\\
+ExcExc&2 $\cdot$ pynn.minExcWeight()\\
 ExcInh&0 $\cdot$ pynn.minExcWeight()\\
 InhExc&0 $\cdot$ pynn.minInhWeight()
 \end{tabular}
 \label{tab:06}
 \end{table}
 
-\noindent Mit diesen Gewichten erhält man das in Abbildung \ref{fig:abb10} dargestellte Verhalten.
+\noindent Mit diesen Gewichten erhält man das in Abbildung \ref{fig:abb10} dargestellte Verhalten. Man sieht, das die Hälfte aller Neuronen nun nicht mehr feuert sowie eine Auffächerung: Eine größere Anzahl an Neuronen feuert nun mehrfach.
 
 \begin{figure} [ht]
 \begin{center}
@@ -694,18 +694,18 @@ What is the maximal chain length that you can produce?
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb4}
-\caption{Aktivität der Synfire-Kette mit in einer Loop-Konfiguration, in der die letzte Population die erste stimuliert}
+\caption{df}
 \includegraphics[scale=0.35]{pictures/chainlength_64.png}
 \end{center}
 \end{figure}
 
-
+Die starke Auffächerung der Kette lässt sich durch die starke 
 \subsection{Aufgabe 3}
 Wir schließen die Synfire-Chain, indem wir die letzte Population an Neuronen mit der ersten verbinden.
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb4}
-\caption{Loop-Konfiguration}
+\caption{Aktivität der Synfire-Kette mit in einer Loop-Konfiguration, in der die letzte Population die erste stimuliert}
 \includegraphics[scale=0.35]{pictures/synfire_chain_loop.png}
 \end{center}
 \end{figure}
