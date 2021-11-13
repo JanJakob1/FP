@@ -318,7 +318,7 @@ $4$&$107.5 nS$
 
 
 \subsection{Aufgabe 5}
-Wie man sehen kann, erhält man eine asymmetrische Verteilung, die Poissonartig aussieht. Dies ist in sehr guter Übereinstimmung mit dem Histrogramm aus der Versuchsanleitung.
+Wie man sehen kann, erhält man eine asymmetrische Verteilung, die poissonartig aussieht. Dies ist in sehr guter Übereinstimmung mit dem Histrogramm aus der Versuchsanleitung.
 
 
 \begin{figure} [ht]
@@ -390,77 +390,347 @@ Wir untersuchen das fixed-pattern noise zwischen verschiedenen Synapsen. Hierzu 
 \end{figure}
 
 
-
 \subsection{Aufgabe 4}
-In einem zusätzlichen Skript zu dieser Aufgabe (fp_task3_synin_epsp_stacked.py) finden Sie
-kommentierte Zeilen für eine andere Stimuluserzeugung. Verwenden Sie diesen Stimulus zur Beobachtung gestapelter
-EPSPs auf der Membran zu beobachten, und reduzieren Sie den zeitlichen Abstand zwischen den Eingangs-Spikes
-bis das Neuron mindestens einmal feuert. Dazu darf der Schwellenwert nicht auf einen großen
-Wert gesetzt werden.
-Vergleichen Sie die relativen Höhen der verschiedenen PSPs qualitativ mit den vorherigen Ergebnissen des festen
-Muster-Rausch-Ergebnissen. Beachten Sie, dass die Eingangs-Spikes von verschiedenen Synapsen
-Treibern stammen. Berücksichtigen Sie Ihre Ergebnisse bezüglich des Rauschens mit festen Mustern: Was erwarten Sie?
+Wir verwenden eine andere Stimuluserzeugung zur Beobachtung gestapelter
+EPSPs und reduzieren den zeitlichen Abstand zwischen den Eingangs-Spikes
+bis das Neuron mindestens einmal feuert. In einem festen Zeitabstand werden Input-Spikes erzeugt, bis die Summe der Potentiale den Schwellwert (Threshold) übersteigt und das Neuron feuert. Ist der Zeitabstand zwischen zwei Input-Spikes zu groß, so kommt es zu keiner zeitlichen Summation der Signale.\\
 
-Übersetzt mit www.DeepL.com/Translator (kostenlose Version)
+\noindent Vergleich der relativen Höhen der verschiedenen PSPs qualitativ mit den vorherigen Ergebnissen des fixed-pattern noise: Der Peak des Membranpotentials hat einen höheren Wert wie die resultierenden PSP-Höhen in Aufgabe 3. Dies liegt daran, dass die Eingangs-Spikes gestapelt werden. Unterschiedliche Peak-Höhen zeigen außerdem das fixed pattern noise sehr deutlich.
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb10}
+\caption{Anregungen durch verschiedene Synapsen. Unterschiedliche Peak-Höhen zeigen das fixed pattern noise sehr deutlich.}
+\includegraphics[scale=0.5]{pictures/resonant_firing.pdf} 
+\end{center}
+\end{figure}
+
 
 \newpage
 
 
 \section{Kurzzeit-Plastizität}
-
+In dieser Aufgabe untersuchen wir die Hardware-Implementierung der Kurzzeitplastizität (STP). 
 
 \subsection{Aufgabe 1}
+Wir starten mit dem depressing mode ($\tau_{fac} = 0$). Wir beobachten folgendes Verhalten:
+\begin{itemize}
+\item Verkleinert man die die spike distance, 
+\item Je größer die final spike distance, desto größer ist der letzte Peak (weniger stark depressed).
+\item Verringert man die Utilization $U$ so werden die Werte der PSP-Höhen größer und fallen schneller ab.
+\item Verkleinert man $\tau_{rec}$
+\end{itemize} 
 
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb11}
+\caption{spike distance: 50.0ms, final spike distance: 100.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_1.pdf} 
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb12}
+\caption{spike distance: 100.0ms, final spike distance: 300.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_2.pdf} 
+\end{center}
+\end{figure}
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb13}
+\caption{spike distance: 10.0ms, final spike distance: 300.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_3.pdf} 
+\end{center}
+\end{figure}
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb14}
+\caption{spike distance: 100.0ms, final spike distance: 100.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_4.pdf} 
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb15}
+\caption{spike distance: 100.0ms, final spike distance: 200.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_5.pdf} 
+\end{center}
+\end{figure}
+
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb16}
+\caption{spike distance: 100.0ms, final spike distance: 500.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_6.pdf} 
+\end{center}
+\end{figure}
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb17}
+\caption{U: 0.2, spike distance: 100.0ms, final spike distance: 150.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_7.pdf} 
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb18}
+\caption{U: 0.8, spike distance: 100.0ms, final spike distance: 150.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_8.pdf} 
+\end{center}
+\end{figure}
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb19}
+\caption{$t_{rec}$: 100.0ms, final spike distance: 200.0ms, U: 0.6, spike distance: 100.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_9.pdf} 
+\end{center}
+\end{figure}
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb20}
+\caption{$t_{rec}$: 150.0ms, final spike distance: 200.0ms, U: 0.6, spike distance: 100.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_10.pdf} 
+\end{center}
+\end{figure}
+
+\newpage
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb21}
+\caption{$t_{rec}$: 200.0ms, final spike distance: 200.0ms, U: 0.6, spike distance: 100.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_11.pdf} 
+\end{center}
+\end{figure}
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb22}
+\caption{spike distance: 300.0ms, $t_{fac}$: 100.0ms, U: 0.8, final spike distance: 300.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_12.pdf} 
+\end{center}
+\end{figure}
 
 \subsection{Aufgabe 2}
+dfdfdf
 
 
 \subsection{Aufgabe 3}
+Wir schalten in den falilating mode und untersuchen analog das Verhalten des Membranpotentials ....
+
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb23}
+\caption{spike distance: 100.0ms, $t_{fac}$; 100.0ms, U: 0.8, final spike distance: 300.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_13.pdf} 
+\end{center}
+\end{figure}
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb24}
+\caption{final spike distance: 100.0, $t_{fac}$, 150.0, U: 0.6, spike distance: 100.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_14.pdf} 
+\end{center}
+\end{figure}
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb25}
+\caption{final spike distance: 300.0ms, $t_{fac}$: 150.0ms, U: 0.6, spike distance: 100.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_15.pdf} 
+\end{center}
+\end{figure}
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb26}
+\caption{final spike distance: 500.0ms, $t_{fac}$: 150.0ms, U: 0.6, spike distance: 100.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_16.pdf} 
+\end{center}
+\end{figure}
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb27}
+\caption{U: 0.4, $t_{fac}$: 100.0ms, spike distance: 100.0ms, final spike distance: 300.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_17.pdf} 
+\end{center}
+\end{figure}
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb28}
+\caption{U: 0.8, $t_{fac}$: 100.0ms, spike distance: 100.0ms, final spike distance: 300.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_18.pdf} 
+\end{center}
+\end{figure}
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb29}
+\caption{$t_{fac}$: 50.0ms, U: 0.6, spike distance: 100.0ms, final spike distance: 300.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_19.pdf} 
+\end{center}
+\end{figure}
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb30}
+\caption{$t_{fac}$: 200.0ms, U: 0.6, spike distance: 100.0ms, final spike distance: 300.0ms}
+\includegraphics[scale=0.35]{pictures/final_spike_variation_20.pdf} 
+\end{center}
+\end{figure}
 
 
 \newpage
 
 
 \section{Feed-Forward Netzwerke}
-In diesem Versuchsteil wird erstmals ein neuronales Netz am Beispiel einer vorwärts gerichteten Synfire Chain untersucht. Der Aufbau erfolgt gemäß Abbildung \ref{fig:abb11100}. Die Kettenglieder sind Populationen und bestehene aus einer gewissen Anzahl Neuronen. Jede Population ist jeweils mit der nächsten Population verbunden. Eine Gruppe (Spalte) feuert dabei immer synchron. Die inhibitorischen Neuronen verhindern ein Doppelfeuern der exzitatorischen. 
+Wir untersuchen ein neuronales Netz am Beispiel einer vorwärts gerichteten Synfire Chain. Der Aufbau erfolgt gemäß Abbildung \ref{fig:abb11100}. Die Kettenglieder sind Populationen und bestehene aus einer gewissen Anzahl Neuronen. Jede Population ist jeweils mit der nächsten Population verbunden. Eine Gruppe (Spalte) feuert dabei immer synchron. Die inhibitorischen Neuronen verhindern ein Doppelfeuern der exzitatorischen. 
 
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb4}
 \caption{Schematische Darstellung einer Synfire-Kette mit Feed-Forward-Hemmung. Erregende und hemmende Neuronen sind rot bzw. blau gefärbt}
-\includegraphics[scale=0.35]{pictures/example.png}
+\includegraphics[scale=0.8]{pictures/synfire_chain.png}
 \end{center}
 \end{figure}
 
 \subsection{Aufgabe 1}
 
+Die exc-exc scheint die sensitivste Verbindung zu sein, da dort das weight am niedrigsten eingestellt werden musste. 
+
+
+
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb4}
-\caption{Emuliertes Netzwerk: Aktivität der Synfire-Kette einschließlich des Membranpotenzials des Neurons mit ID=0}
-\includegraphics[scale=0.35]{pictures/feed_forward_synfire_behavior.png}
+\caption{Aktivität der Synfire-Kette einschließlich des Membranpotenzials des Neurons mit ID=0}
+\includegraphics[scale=0.35]{pictures/task1_synfire_chain.png}
 \end{center}
 \end{figure}
 
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb4}
+\caption{Aktivität der Synfire-Kette mit abgestellter Inhibition}
+\includegraphics[scale=0.35]{pictures/synfire_chain_disable_inhibition.png}
+\end{center}
+\end{figure}
+
+
 \subsection{Aufgabe 2}
+maximal chain length: 2exc, 1inh --> length: 64 populations
+Which hardware feature limits the min nbr of neurons in each population --> lukas
+What is the maximal chain length that you can produce?
+Mit einer kleineren Anzahl an Neuronen je Population kann die Kettenlänge und die Dauer der Netzwerkaktivität erhöht werden.
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb4}
+\caption{Aktivität der Synfire-Kette mit in einer Loop-Konfiguration, in der die letzte Population die erste stimuliert}
+\includegraphics[scale=0.35]{pictures/chainlength_64.png}
+\end{center}
+\end{figure}
 
 
 \subsection{Aufgabe 3}
 
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb4}
+\caption{Aktivität der Synfire-Kette mit in einer Loop-Konfiguration, in der die letzte Population die erste stimuliert}
+\includegraphics[scale=0.35]{pictures/synfire_chain_loop.png}
+\end{center}
+\end{figure}
+
+Record 4 hardware neurons on the oszi from ascending populations (see the temporal difference):
+ecord 4 hardware neurons on the oscilloscope from ascending populations to see the
+temporal difference of the arriving PSPs on the membranes and observe the timing of
+the arriving excitatory stimulus and the feed-forward inhibition. Convince yourself that
+the activity is sustained even after the software run completed.
+
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb4}
+\caption{Aktivität der Synfire-Kette mit abgestellter Inhibition einschließlich des Membranpotenzials des Neurons mit ID=0}
+\includegraphics[scale=0.05]{pictures/oszilloskop_pic_3.jpg}
+\end{center}
+\end{figure}
 
 \newpage
 
 
 \section{Rekurrente Netzwerke}
+What would happen if we would want to use excitatory connections? --> Lukas
+For each neuron, measure the firing rate and plot it against the
+CVs of inter-spike intervals
 
+Wir versetzen eine Population von einigen Neuronen in einen kontinuierlich feuernden Zustand. 
 
 \subsection{Aufgabe 1}
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb4}
+\caption{Feuerrate in Abhängigkeit der CVs}
+\includegraphics[scale=0.45]{pictures/decorr_rate_over_cv.png}
+\end{center}
+\end{figure}
+
+Interpret the correlation between firing rates and CVs:
+CV größer --> rate kleiner
+größere Abweichungen, dann wird manchmal der Threshold nicht überschritten und die chain bricht ab.
+
 
 
 \subsection{Aufgabe 2}
 
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb4}
+\caption{Feuerrate in Abhängigkeit der CVs}
+\includegraphics[scale=0.45]{pictures/CVs.pdf}
+\end{center}
+\end{figure}
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb4}
+\caption{Feuerrate in Abhängigkeit der CVs}
+\includegraphics[scale=0.45]{pictures/mean_activity.pdf}
+\end{center}
+\end{figure}
+
 
 \subsection{Aufgabe 3}
+Im letzten Teil des Versuchs wurde versucht die Feuerraten auf 25 Hz zu bringen. Das haben wir mit einem Gewicht von 1 und 23 Verbindungen am besten geschafft (25.1 Hz). Die Job Id war: job 150194 (leider haben wir die Daten nicht mehr, da der Job gelöscht wurde und nicht in der letzten jupyter Version war, die wir heruntergeladen haben), sonst hätten wir auch noch die verschiedenen Plots dazu abgespeichert. 
+ 
+Calibrate the network towards a firing rate of approximately 25 Hz. Write down the
+used parameters and save the results. Optional: Try to maximize the average CV, while
+keeping the firing rate constant.
+
+calibrate network to 25Hz
+Parameters used:
+w = 2, k = 10
+--> 24.8 Hz
 
 
 \newpage
@@ -470,18 +740,46 @@ In diesem Versuchsteil wird erstmals ein neuronales Netz am Beispiel einer vorw�
 
 
 \subsection{Aufgabe 1}
-
+Assume that everything works perfectly (i.e. all neurons work and each input spike
+triggers exactly one output spike). Can you come up with a smaller network that can
+perform this task, given that each neuron can only have either excitatory or inhibitory
+synapses? Draw a network circuit diagram.
+smaller network --> Lukas
 
 \subsection{Aufgabe 2}
-
+In the network from Figure 16: Which are the most sensitive connections? How could
+we make the network more robust? Compare this to subsection 4.5.
+Lukas
 
 \subsection{Aufgabe 3}
+xor Y2Hw = 2 I2Yw = 2 Y2Hi = 15H2Ow = 4 
+Find a set of weights I2Yw, Y2Hw, Y2Hi and H2Ow in the script.
+Hint: Find a working point for I2Yw first, then Y2Hw and finally Y2Hi and H2Ow.
+Can you reproduce the behavior shown in Figure 17?
+Comment: If a population consistently fails to produce the correct behavior you can
+move it to other physical neurons by adding it to skip if unreliable list.
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb4}
+\caption{Feuerrate in Abhängigkeit der CVs}
+\includegraphics[scale=0.45]{pictures/aufgabe7_3.png}
+\end{center}
+\end{figure}
 
 
 \subsection{Aufgabe 4}
+What do you expect to happen if there is some jitter on the input? Check the classifi-
+cation rate (correct outputs as a fraction of presented inputs) for different amounts of
+jitter.
 
-
-
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb4}
+\caption{Feuerrate in Abhängigkeit der CVs}
+\includegraphics[scale=0.45]{pictures/jitter_plot_lang.png}
+\end{center}
+\end{figure}
 
 
 \end{document}
