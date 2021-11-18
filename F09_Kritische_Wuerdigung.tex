@@ -101,20 +101,28 @@
 
 %\section{Untersuchung eines einzelnen Neurons}
 
+\subsection*{Zur Versuchsanleitung}
+Die Versuchsanleitung ist äußert knapp bemessen und spart reichlich an Details. Auch die Vorbereitung auf den Versuch war dadurch sehr schwer. Ferner werden viele Fachbegriffe benutzt, die im Umfeld von neuromorphem Rechnen Gang und Gebe sind, dem Laien aber nicht verständlich gemacht werden. Die Definitionen dieser Fachbegriffe könnte man in der Versuchsanleitung ergänzen.
+
 \subsection*{Versuchsteil 1}
 Der Versuchsteil war weitgehdend verständlich und gut umsetzbar. Wir hatten allerdings bei folgenden Themen Schwierigkeiten: Da aus der Versuchsanleitung nicht klar hervorgeht wie die firing rate berechnet werden soll (mit oder ohne Fehler), haben wir uns zuerst für die Berechnung über die Anzahl der Ergeignisse pro Zeit entschieden. Später haben wir erfahren, dass wir die Firingrate doch mit Fehler und einem anderen Verfahren über die gemittelten Zeitdifferenzen berechnen sollten. Das hat den Vorgang unnötig verkompliziert und in die Länge gezogen. In der Aufgabenstellung könnte man außerdem den Hinweis geben die Umrechnung zwischen biologischen und Chip-Zeitskalen nicht zu vergessen. Aus pädagogischen Gründen kann darauf aber wie bisher auch verzichtet werden.
 
 \subsection*{Versuchsteil 2}
+Wie man verschiedene Neuronen auf die gleiche Feuerrate bringt, war uns , aber am Ende dann doch noch ziemlich große Unterschiede (22 vs 36 ms zwischen pulses)
 
 \subsection*{Versuchsteil 3}
+teilweise bei werden die peaks bei inhibitory connections trotzdem immer höher
 
 \subsection*{Versuchsteil 4}
+Wir haben ziemlich lange mit einer Synapse rum probiert wo keine richtigen Ergebnisse raus kamen. Generell könnte im Skript öfter der Hinweis stehen, dass man eventuell andere Synapsen benutzen soll wenn die Ergebnisse nicht so aussehen wie erwartet. Eine Erklärung was U genau ist wäre hilfreich gewesen, so haben wir nicht herausgefunden was mit den 4 Settings von U gemeint ist. Wir wissen, dass U ein Paramter des Tsodys-Markram Models für STP ist. Allerdings hört hier unser Kenntnisstand auf und die Versuchsanleitung hilft uns nicht weiter.
 
 \subsection*{Versuchsteil 5}
+Wir haben sehr viel Zeit darauf verwendet verschiedene Parameter-Werte auszuprobieren, jedoch ohne Erfolg. Tipps in der Versuchsanleitung wären hier sicherlich hilfreich gewesen. Letztendlich hätten wir ohne unseren Tutor nicht das gewünschte Verhalten reproduzieren können.
 
 \subsection*{Versuchsteil 6}
+Dieser Versuchsteil hat bei uns gut funktionert.
 
 \subsection*{Versuchsteil 7}
-
+Wir konnten leider nicht die richtigen Parameter finden um das gewünschte Verhalten des XOR-Gates zu reproduzieren. Für Aufgabenteil 4 haben wir folgenden Verbesserungsvorschlag: Mit höheren Jitter-Werten sinkt bekanntlich die Genauigkeit. Eine Lösung für dieses Problem wäre mehrere Signale auszusenden und das am häufigsten beobachtete Ereignis zu nehmen. Eventuell könnte man solch ein Verfahren noch in den Versuch mitaufnehmen.
 
 \end{document}
