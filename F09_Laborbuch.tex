@@ -73,9 +73,8 @@
 
 %Titel Gedöns
 \title{Versuch F09\\ Neuromorphic Computing}
-\date{Lab book}
+\date{Laborbuch und Auswertung}
 \author{Xeno Boecker, Jan Jakob}
-\date{}
 
 \begin{document}
 
@@ -169,8 +168,8 @@ $V_{thresh}$&$-56.0 \pm 3.0$mV
 
 \noindent Die Werte liegen jeweils im $3\sigma$-Bereich.
 \begin{figure} [ht]
-\begin{center}
 \label{fig:abb2}
+\begin{center}
 \caption{Verlauf des Membranpotentials}
 \includegraphics[scale=0.5]{experiments/SingleNeuron/fp_task1_1membrane.png} 
 \end{center}
@@ -219,7 +218,8 @@ print("firing rate std deviation", 1e4 / np.std(timeDifferences))
 f_{firing} = 356.5 \pm 4.7kHz.
 \end{align*}
 
-\noindent Den Faktor $1e4$ benötigen wir zur Umrechnung von biologischen Zeitskalen auf Chip-Zeitskalen.
+\noindent Den Faktor $1e4$ benötigen wir zur Umrechnung von biologischen Zeitskalen auf Chip-Zeitskalen.\\
+
 
 \newpage
 
@@ -267,7 +267,7 @@ Wir ändern die Einstellung für $V_{thresh}$ im Skript entsprechend und führen
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb4}
+\label{fig:abb04}
 \caption{Membranspannungen bei vier verschiedenen Neuronen}
 \includegraphics[scale=0.04]{pictures/oszilloskop_pic_2.jpg} 
 \end{center}
@@ -323,7 +323,7 @@ Wie man sehen kann, erhält man eine asymmetrische Verteilung, die poissonartig 
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb4}
+\label{fig:abb05}
 \caption{Histogramm der Membranzeitkonstanten von 192 unkalibrierten Neuronen}
 \includegraphics[scale=0.35]{pictures/firing_rates.pdf} 
 \end{center}
@@ -342,7 +342,7 @@ Die Parameter drvifall und drviout werden variiert, dabei wird beobachtet, dass 
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb6}
+\label{fig:abb06}
 \caption{EPSP mit Parametern drvifall=1.5, drviout=1.6}
 \includegraphics[scale=0.35]{pictures/epsp_fall_1_5_out_1_6.pdf} 
 \end{center}
@@ -350,7 +350,7 @@ Die Parameter drvifall und drviout werden variiert, dabei wird beobachtet, dass 
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb7}
+\label{fig:abb07}
 \caption{EPSP mit Parametern drvifall=0.1, drviout=1.6}
 \includegraphics[scale=0.35]{pictures/epsp_fall_0_1_out_1_6.pdf} 
 \end{center}
@@ -358,7 +358,7 @@ Die Parameter drvifall und drviout werden variiert, dabei wird beobachtet, dass 
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb8}
+\label{fig:abb08}
 \caption{EPSP mit Parametern drvifall=1.5, drviout=0.3}
 \includegraphics[scale=0.35]{pictures/epsp_fall_1_5_out_0_3.pdf} 
 \end{center}
@@ -371,7 +371,7 @@ Wie erwartet ist der Peak umgekehrt. Das Verhalten der beiden Parameter drvifall
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb9}
+\label{fig:abb09}
 \caption{IPSP mit Parametern drvifall=1.5, drviout=1.6}
 \includegraphics[scale=0.35]{pictures/epsp_inhibitory_fall_1_5_out_1_6.pdf} 
 \end{center}
@@ -399,7 +399,7 @@ bis das Neuron mindestens einmal feuert. In einem festen Zeitabstand werden Inpu
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb10}
+\label{fig:abb11}
 \caption{Anregungen durch verschiedene Synapsen. Unterschiedliche Peak-Höhen zeigen das fixed pattern noise sehr deutlich.}
 \includegraphics[scale=0.5]{pictures/resonant_firing.pdf} 
 \end{center}
@@ -423,7 +423,7 @@ Wir starten mit dem depressing mode ($\tau_{fac} = 0$). Wir beobachten folgendes
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb11}
+\label{fig:abb12}
 \caption{spike distance: 50.0ms, final spike distance: 100.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_1.pdf} 
 \end{center}
@@ -433,7 +433,7 @@ Wir starten mit dem depressing mode ($\tau_{fac} = 0$). Wir beobachten folgendes
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb12}
+\label{fig:abb13}
 \caption{spike distance: 100.0ms, final spike distance: 300.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_2.pdf} 
 \end{center}
@@ -441,7 +441,7 @@ Wir starten mit dem depressing mode ($\tau_{fac} = 0$). Wir beobachten folgendes
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb13}
+\label{fig:abb14}
 \caption{spike distance: 10.0ms, final spike distance: 300.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_3.pdf} 
 \end{center}
@@ -449,7 +449,7 @@ Wir starten mit dem depressing mode ($\tau_{fac} = 0$). Wir beobachten folgendes
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb14}
+\label{fig:abb15}
 \caption{spike distance: 100.0ms, final spike distance: 100.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_4.pdf} 
 \end{center}
@@ -459,7 +459,7 @@ Wir starten mit dem depressing mode ($\tau_{fac} = 0$). Wir beobachten folgendes
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb15}
+\label{fig:abb16}
 \caption{spike distance: 100.0ms, final spike distance: 200.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_5.pdf} 
 \end{center}
@@ -468,7 +468,7 @@ Wir starten mit dem depressing mode ($\tau_{fac} = 0$). Wir beobachten folgendes
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb16}
+\label{fig:abb17}
 \caption{spike distance: 100.0ms, final spike distance: 500.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_6.pdf} 
 \end{center}
@@ -476,7 +476,7 @@ Wir starten mit dem depressing mode ($\tau_{fac} = 0$). Wir beobachten folgendes
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb17}
+\label{fig:abb18}
 \caption{U: 0.2, spike distance: 100.0ms, final spike distance: 150.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_7.pdf} 
 \end{center}
@@ -486,7 +486,7 @@ Wir starten mit dem depressing mode ($\tau_{fac} = 0$). Wir beobachten folgendes
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb18}
+\label{fig:abb19}
 \caption{U: 0.8, spike distance: 100.0ms, final spike distance: 150.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_8.pdf} 
 \end{center}
@@ -494,7 +494,7 @@ Wir starten mit dem depressing mode ($\tau_{fac} = 0$). Wir beobachten folgendes
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb19}
+\label{fig:abb20}
 \caption{$\tau_{rec}$: 100.0ms, final spike distance: 200.0ms, U: 0.6, spike distance: 100.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_9.pdf} 
 \end{center}
@@ -502,7 +502,7 @@ Wir starten mit dem depressing mode ($\tau_{fac} = 0$). Wir beobachten folgendes
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb20}
+\label{fig:abb21}
 \caption{$\tau_{rec}$: 150.0ms, final spike distance: 200.0ms, U: 0.6, spike distance: 100.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_10.pdf} 
 \end{center}
@@ -512,7 +512,7 @@ Wir starten mit dem depressing mode ($\tau_{fac} = 0$). Wir beobachten folgendes
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb21}
+\label{fig:abb22}
 \caption{$\tau_{rec}$: 200.0ms, final spike distance: 200.0ms, U: 0.6, spike distance: 100.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_11.pdf} 
 \end{center}
@@ -534,7 +534,7 @@ Wir schalten in den falilating mode ($\tau_{rec} = 0$) und untersuchen analog da
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb22}
+\label{fig:abb23}
 \caption{spike distance: 300.0ms, $\tau_{fac}$: 100.0ms, U: 0.8, final spike distance: 300.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_12.pdf} 
 \end{center}
@@ -544,7 +544,7 @@ Wir schalten in den falilating mode ($\tau_{rec} = 0$) und untersuchen analog da
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb23}
+\label{fig:abb24}
 \caption{spike distance: 100.0ms, $\tau_{fac}$: 100.0ms, U: 0.8, final spike distance: 300.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_13.pdf} 
 \end{center}
@@ -552,7 +552,7 @@ Wir schalten in den falilating mode ($\tau_{rec} = 0$) und untersuchen analog da
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb24}
+\label{fig:abb25}
 \caption{final spike distance: 100.0ms, $\tau_{fac}$, 150.0, U: 0.6, spike distance: 100.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_14.pdf} 
 \end{center}
@@ -560,7 +560,7 @@ Wir schalten in den falilating mode ($\tau_{rec} = 0$) und untersuchen analog da
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb25}
+\label{fig:abb26}
 \caption{final spike distance: 300.0ms, $\tau_{fac}$: 150.0ms, U: 0.6, spike distance: 100.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_15.pdf} 
 \end{center}
@@ -570,7 +570,7 @@ Wir schalten in den falilating mode ($\tau_{rec} = 0$) und untersuchen analog da
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb26}
+\label{fig:abb27}
 \caption{final spike distance: 500.0ms, $\tau_{fac}$: 150.0ms, U: 0.6, spike distance: 100.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_16.pdf} 
 \end{center}
@@ -578,7 +578,7 @@ Wir schalten in den falilating mode ($\tau_{rec} = 0$) und untersuchen analog da
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb27}
+\label{fig:abb28}
 \caption{U: 0.4, $\tau_{fac}$: 100.0ms, spike distance: 100.0ms, final spike distance: 300.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_17.pdf} 
 \end{center}
@@ -586,7 +586,7 @@ Wir schalten in den falilating mode ($\tau_{rec} = 0$) und untersuchen analog da
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb28}
+\label{fig:abb29}
 \caption{U: 0.8, $\tau_{fac}$: 100.0ms, spike distance: 100.0ms, final spike distance: 300.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_18.pdf} 
 \end{center}
@@ -596,7 +596,7 @@ Wir schalten in den falilating mode ($\tau_{rec} = 0$) und untersuchen analog da
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb29}
+\label{fig:abb30}
 \caption{$\tau_{fac}$: 50.0ms, U: 0.6, spike distance: 100.0ms, final spike distance: 300.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_19.pdf} 
 \end{center}
@@ -604,7 +604,7 @@ Wir schalten in den falilating mode ($\tau_{rec} = 0$) und untersuchen analog da
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb30}
+\label{fig:abb31}
 \caption{$\tau_{fac}$: 200.0ms, U: 0.6, spike distance: 100.0ms, final spike distance: 300.0ms}
 \includegraphics[scale=0.35]{pictures/final_spike_variation_20.pdf} 
 \end{center}
@@ -619,7 +619,7 @@ Wir untersuchen ein neuronales Netz am Beispiel einer vorwärts gerichteten Synf
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb4}
+\label{fig:abb32}
 \caption{Schematische Darstellung einer Synfire-Kette mit Feed-Forward-Hemmung. Erregende und hemmende Neuronen sind rot bzw. blau gefärbt}
 \includegraphics[scale=0.8]{pictures/synfire_chain.png}
 \end{center}
@@ -666,7 +666,7 @@ InhExc&0 $\cdot$ pynn.minInhWeight()
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb4}
+\label{fig:abb33}
 \caption{Aktivität der Synfire-Kette einschließlich des Membranpotenzials des Neurons mit ID=0}
 \includegraphics[scale=0.35]{pictures/task1_synfire_chain.png}
 \end{center}
@@ -674,7 +674,7 @@ InhExc&0 $\cdot$ pynn.minInhWeight()
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb4}
+\label{fig:abb34}
 \caption{Aktivität der Synfire-Kette mit deaktivierter Inhibition}
 \includegraphics[scale=0.35]{pictures/synfire_chain_disable_inhibition.png}
 \end{center}
@@ -706,7 +706,7 @@ InhExc&15 $\cdot$ pynn.minInhWeight()
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb4}
+\label{fig:abb35}
 \caption{Synfire-Chain maximaler Länge}
 \includegraphics[scale=0.35]{pictures/chainlength_64.png}
 \end{center}
@@ -721,7 +721,7 @@ Wir schließen die Synfire-Chain, indem wir die letzte Population an Neuronen mi
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb4}
+\label{fig:abb36}
 \caption{Aktivität der Synfire-Kette mit in einer Loop-Konfiguration, in der die letzte Population die erste stimuliert}
 \includegraphics[scale=0.35]{pictures/synfire_chain_loop.png}
 \end{center}
@@ -731,7 +731,7 @@ Wir schließen die Synfire-Chain, indem wir die letzte Population an Neuronen mi
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb4}
+\label{fig:abb37}
 \caption{PSPs von 4 Hardware-Neuronen}
 \includegraphics[scale=0.05]{pictures/oszilloskop_pic_3.jpg}
 \end{center}
@@ -742,61 +742,43 @@ Wir schließen die Synfire-Chain, indem wir die letzte Population an Neuronen mi
 
 
 \section{Rekurrente Netzwerke}
-What would happen if we would want to use excitatory connections? --> Lukas
-For each neuron, measure the firing rate and plot it against the
-CVs of inter-spike intervals
-
-Wir versetzen eine Population von einigen Neuronen in einen kontinuierlich feuernden Zustand. 
+In diesem Versuchsteil untersuchen wir den Einfluss von zufälligen Verbindungen auf die neuronale Aktivität. Wir versetzen eine Population von einigen Neuronen in einen kontinuierlich feuernden Zustand. 
 
 \subsection{Aufgabe 1}
+
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb4}
-\caption{Feuerrate in Abhängigkeit der CVs}
+\label{fig:abb38}
+\caption{Feuerrate in Abhängigkeit der CVs für die ISI}
 \includegraphics[scale=0.45]{pictures/decorr_rate_over_cv.png}
 \end{center}
 \end{figure}
 
-Interpret the correlation between firing rates and CVs:
-CV größer --> rate kleiner
-größere Abweichungen, dann wird manchmal der Threshold nicht überschritten und die chain bricht ab.
-
-Wir sehen ein antiproportionales Verhalten zwischen dem CV -Wert und der Feuerrate
-Leckspannung > Schwellenspannung --> ohne synaptische Verbindungen gleichmäßige hohe Feuerrate
-Bei kleinem CV, also kleiner Streuung verändert sich nicht viel durch die inhibitorischen Verbindungen
-nur bei Stärkerer Streuung passiert es öfter, dass die Schwellenspannung nicht mehr überschritten wird und damit ein Neuron nicht feuert, wodurch die Feuerrate kleiner wird
+\noindent Man erkennt, dass mit steigendem CV die Feuerrate kleiner wird. Es scheint ein antiproportionales Verhalten zwischen dem CV-Wert und der Feuerrate zu geben. Ohne synaptische Verbindungen würde man gleichmäßig hohe Feuerraten erhalten, da hier immer die Leckspannung größer als die Schwellenspannung ist. Bei kleinem CV, also kleiner Streuung bzw. hoher mittlerem ISI, verändert sich nicht viel durch die inhibitorischen Verbindungen. Bei stärkerer Streuung bzw. kleinerem mittlerem ISI passiert es öfter, dass die Schwellenspannung nicht mehr überschritten wird und damit ein Neuron nicht feuert, wodurch die Feuerrate kleiner wird.
 
 
 \subsection{Aufgabe 2}
 
+Nun soll die Abhängigkeit der Feuerraten und CVs von den Verbindungsgewichten $\omega$ und der Anzahl K der präsynaptischen Partner untersucht werden. Experimentell zeigt sich, dass bei kleineren Verbindungsgewichten die Feuerrate steigt und der CV-Wert sinkt. Zudem steigt bei kleinerem K die Feuerrate und der CV-Wert sinkt.
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb4}
-\caption{Feuerrate in Abhängigkeit der CVs}
-\includegraphics[scale=0.45]{pictures/CVs.pdf}
+\label{fig:abb39}
+\caption{CV}
+\includegraphics[scale=0.35]{pictures/CVs.pdf}
 \end{center}
 \end{figure}
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb4}
-\caption{Feuerrate in Abhängigkeit der CVs}
+\label{fig:abb40}
+\caption{Mittlere Aktivität}
 \includegraphics[scale=0.45]{pictures/mean_activity.pdf}
 \end{center}
 \end{figure}
 
 
 \subsection{Aufgabe 3}
-Im letzten Teil des Versuchs wurde versucht die Feuerraten auf 25 Hz zu bringen. Das haben wir mit einem Gewicht von 1 und 23 Verbindungen am besten geschafft (25.1 Hz). Die Job Id war: job 150194 (leider haben wir die Daten nicht mehr, da der Job gelöscht wurde und nicht in der letzten jupyter Version war, die wir heruntergeladen haben), sonst hätten wir auch noch die verschiedenen Plots dazu abgespeichert. 
- 
-Calibrate the network towards a firing rate of approximately 25 Hz. Write down the
-used parameters and save the results. Optional: Try to maximize the average CV, while
-keeping the firing rate constant.
-
-calibrate network to 25Hz
-Parameters used:
-w = 2, k = 10
---> 24.8 Hz
+Schließlich wurde versucht die Feuerrate auf 25 Hz zu bringen. Das haben wir mit folgenden Paramtern am besten geschafft: $\omega$ = 2 und K = 10. Bei Verwendung dieser Paramter erhielten wir eine Feuerrate von 24.8 Hz.
 
 
 \newpage
@@ -810,7 +792,7 @@ Wir nehmen an, dass alle Neuronen funktionieren und jeder Eingangsimpuls löst g
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb4}
+\label{fig:abb41}
 \caption{Simples XOR-Gate}
 \includegraphics[scale=0.45]{pictures/xor_gatter.png}
 \end{center}

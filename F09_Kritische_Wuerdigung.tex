@@ -1,0 +1,120 @@
+% !TEX encoding=utf8
+\documentclass[10pt,a4paper]{scrartcl}
+
+\usepackage{ucs}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb, amstext}
+\usepackage{mathtools}
+\usepackage[pdftex]{graphicx}
+\usepackage{bibgerm}
+\usepackage{amsthm}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{dsfont}
+\usepackage{caption}
+\usepackage{multicol}
+\usepackage{pdfpages}
+\usepackage{listings}
+\usepackage[a4paper,left=2.5cm,right=2.5cm,top=2cm,bottom=4cm,bindingoffset=5mm]{geometry}
+\usepackage{tikz}
+%\usepackage{txfonts}
+\usepackage{textcomp}
+\usepackage{multirow}
+\pagestyle{headings}
+\usepackage{tabularx}
+\usepackage{enumerate}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % linksbündig mit Breitenangabe
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % zentriert mit Breitenangabe
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % rechtsbündig mit Breitenangabe
+\usepackage{subfig}
+
+\setlength{\topmargin}{-15mm}
+%\setcounter{secnumdepth}{5} %wie viele Level
+
+
+%\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{ae,aecompl}
+%\usepackage{amsmath,amssymb,amstext}
+\usepackage{psfrag}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\captionsetup[table]{textfont=it,justification=raggedright,singlelinecheck = false}
+\usepackage{float}
+
+
+
+
+%%%%
+
+% einige Abkuerzungen
+\newcommand{\C}{\mathbb{C}} % komplexe
+\newcommand{\K}{\mathbb{K}} % komplexe
+\newcommand{\R}{\mathbb{R}} % reelle
+\newcommand{\Q}{\mathbb{Q}} % rationale
+\newcommand{\Z}{\mathbb{Z}} % ganze
+\newcommand{\N}{\mathbb{N}} % natuerliche
+
+%Zum markieren: http://texwelt.de/wissen/fragen/2803/wie-kann-ich-formel-teile-einer-gleichung-einkreisen
+\newcommand\mrahmen[3][]{%
+  \tikz[anchor=base,baseline]\node[inner sep=2pt,draw=#2,#1]{$\displaystyle#3\mathstrut$};}
+\colorlet{mfarbe}{red}
+
+
+%verschiednen sachen die man mit begin{...} dann einzeln durchnummerrienen lassen kann
+\newtheorem{defin}{Definition}
+\newtheorem{satz}{Satz}
+\newtheorem{formel}{Formel}
+\newtheorem{abbildung}{Abbildung}
+\newtheorem{versuch}{Versuch}
+
+
+%Titel Gedöns
+\title{Versuch F09\\ Neuromorphic Computing}
+\date{Kritische Würdigung}
+\author{Xeno Boecker, Jan Jakob}
+
+\begin{document}
+
+
+\pagenumbering{roman} %% small roman page numbers
+
+%%% include the title
+\thispagestyle{empty}  %% no header/footer (only) on this page
+ \maketitle
+
+%%% start a new page and display the list of figures
+%\newpage
+%\listoffigures
+
+%%% start a new page and display the list of tables
+%\newpage
+%\listoftables
+
+%%% display the main document on a new page 
+\newpage
+
+\pagenumbering{arabic} %% normal page numbers (include it, if roman was used above)
+
+
+%\section{Untersuchung eines einzelnen Neurons}
+
+\subsection*{Versuchsteil 1}
+Der Versuchsteil war weitgehdend verständlich und gut umsetzbar. Wir hatten allerdings bei folgenden Themen Schwierigkeiten: Da aus der Versuchsanleitung nicht klar hervorgeht wie die firing rate berechnet werden soll (mit oder ohne Fehler), haben wir uns zuerst für die Berechnung über die Anzahl der Ergeignisse pro Zeit entschieden. Später haben wir erfahren, dass wir die Firingrate doch mit Fehler und einem anderen Verfahren über die gemittelten Zeitdifferenzen berechnen sollten. Das hat den Vorgang unnötig verkompliziert und in die Länge gezogen. In der Aufgabenstellung könnte man außerdem den Hinweis geben die Umrechnung zwischen biologischen und Chip-Zeitskalen nicht zu vergessen. Aus pädagogischen Gründen kann darauf aber wie bisher auch verzichtet werden.
+
+\subsection*{Versuchsteil 2}
+
+\subsection*{Versuchsteil 3}
+
+\subsection*{Versuchsteil 4}
+
+\subsection*{Versuchsteil 5}
+
+\subsection*{Versuchsteil 6}
+
+\subsection*{Versuchsteil 7}
+
+
+\end{document}
