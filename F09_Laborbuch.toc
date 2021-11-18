@@ -27,9 +27,9 @@
 \contentsline {section}{\numberline {6}Rekurrente Netzwerke}{19}{section.6}
 \contentsline {subsection}{\numberline {6.1}Aufgabe 1}{19}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Aufgabe 2}{19}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Aufgabe 3}{19}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.3}Aufgabe 3}{20}{subsection.6.3}
 \contentsline {section}{\numberline {7}Eine einfache Berechnung - XOR}{21}{section.7}
 \contentsline {subsection}{\numberline {7.1}Aufgabe 1}{21}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Aufgabe 2}{21}{subsection.7.2}
 \contentsline {subsection}{\numberline {7.3}Aufgabe 3}{21}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}Aufgabe 4}{21}{subsection.7.4}
+\contentsline {subsection}{\numberline {7.4}Aufgabe 4}{22}{subsection.7.4}

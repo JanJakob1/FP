@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.5.22)  13 NOV 2021 20:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2021.5.22)  18 NOV 2021 21:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1410,9 +1410,6 @@ LaTeX Warning: Label `fig:abb4' multiply defined.
 
 LaTeX Warning: Label `fig:abb4' multiply defined.
 
-
-LaTeX Warning: Label `fig:abb4' multiply defined.
-
 )
 \openout1 = `F09_Laborbuch.aux'.
 
@@ -1683,7 +1680,7 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 265.
 
 
-Package caption Warning: \label without proper reference on input line 837.
+Package caption Warning: \label without proper reference on input line 813.
 See the caption package documentation for explanation.
 
 
@@ -2208,95 +2205,108 @@ Package pdftex.def Info: pictures/decorr_rate_over_cv.png  used on input line 7
 56.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 766.
+(babel)             in language  on input line 770.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 766.
+(babel)             in language  on input line 770.
 <pictures/CVs.pdf, id=656, 462.52798pt x 346.89601pt>
 File: pictures/CVs.pdf Graphic file (type pdf)
 <use pictures/CVs.pdf>
-Package pdftex.def Info: pictures/CVs.pdf  used on input line 772.
+Package pdftex.def Info: pictures/CVs.pdf  used on input line 776.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
 <pictures/mean_activity.pdf, id=657, 462.52798pt x 346.89601pt>
 File: pictures/mean_activity.pdf Graphic file (type pdf)
 <use pictures/mean_activity.pdf>
-Package pdftex.def Info: pictures/mean_activity.pdf  used on input line 780.
+Package pdftex.def Info: pictures/mean_activity.pdf  used on input line 784.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 785.
+(babel)             in language  on input line 789.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 785.
+(babel)             in language  on input line 789.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 792.
+(babel)             in language  on input line 791.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 792.
+(babel)             in language  on input line 791.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 792.
+(babel)             in language  on input line 791.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 792.
+(babel)             in language  on input line 791.
  [19 <./pictures/decorr_rate_over_cv.png> <./pictures/CVs.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 798.
+(babel)             in language  on input line 802.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 798.
+(babel)             in language  on input line 802.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 798.
+(babel)             in language  on input line 802.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 798.
+(babel)             in language  on input line 802.
  [20 <./pictures/mean_activity.pdf>]
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 801.
+(babel)             in language  on input line 805.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 801.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 804.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 804.
+(babel)             in language  on input line 805.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 808.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 808.
+<pictures/xor_gatter.png, id=748, 405.01312pt x 268.00125pt>
+File: pictures/xor_gatter.png Graphic file (type png)
+<use pictures/xor_gatter.png>
+Package pdftex.def Info: pictures/xor_gatter.png  used on input line 815.
+(pdftex.def)             Requested size: 182.25421pt x 120.59944pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 813.
+(babel)             in language  on input line 820.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 813.
-<pictures/aufgabe7_3.png, id=748, 462.528pt x 346.896pt>
+(babel)             in language  on input line 820.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 824.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 824.
+
+
+Package caption Warning: \label without proper reference on input line 846.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:abb42' on page 21 undefined on input line 842.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 844.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 844.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 844.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 844.
+[21 <./pictures/xor_gatter.png>]
+<pictures/aufgabe7_3.png, id=756, 462.528pt x 346.896pt>
 File: pictures/aufgabe7_3.png Graphic file (type png)
 <use pictures/aufgabe7_3.png>
-Package pdftex.def Info: pictures/aufgabe7_3.png  used on input line 825.
+Package pdftex.def Info: pictures/aufgabe7_3.png  used on input line 850.
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 830.
+(babel)             in language  on input line 854.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 830.
-<pictures/jitter_plot_lang.png, id=749, 462.528pt x 346.896pt>
+(babel)             in language  on input line 854.
+<pictures/jitter_plot_lang.png, id=757, 462.528pt x 346.896pt>
 File: pictures/jitter_plot_lang.png Graphic file (type png)
 <use pictures/jitter_plot_lang.png>
-Package pdftex.def Info: pictures/jitter_plot_lang.png  used on input line 839.
+Package pdftex.def Info: pictures/jitter_plot_lang.png  used on input line 861.
 
 (pdftex.def)             Requested size: 208.13567pt x 156.10175pt.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 844.
+(babel)             in language  on input line 867.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 844.
+(babel)             in language  on input line 867.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 844.
+(babel)             in language  on input line 867.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 844.
- [21 <./pictures/aufgabe7_3.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 844.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 844.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 844.
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 844.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 844.
- [22 <./pictures/jitter_plot_lang.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 844.
+(babel)             in language  on input line 867.
+ [22 <./pictures/aufgabe7_3.png> <./pictures/jitter_plot_lang.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 867.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 867.
  (./F09_Laborbuch.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 844.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 844.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 867.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 867.
 Package rerunfilecheck Info: File `F09_Laborbuch.out' has not changed.
 (rerunfilecheck)             Checksum: 02ED2EEBFB0879E1287094E2679CFC5B;1980.
 
@@ -2306,13 +2316,13 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 844.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 867.
  ) 
 Here is how much of TeX's memory you used:
- 25325 strings out of 492982
- 453076 string characters out of 6134896
- 621669 words of memory out of 5000000
- 28278 multiletter control sequences out of 15000+600000
+ 25335 strings out of 492982
+ 453264 string characters out of 6134896
+ 621869 words of memory out of 5000000
+ 28285 multiletter control sequences out of 15000+600000
  17094 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,10n,60p,8824b,2006s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2334,10 +2344,10 @@ pfb></usr/share/texmf/fonts/type1/public/cm-super/sfsx1200.pfb></usr/share/texm
 f/fonts/type1/public/cm-super/sfsx1440.pfb></usr/share/texmf/fonts/type1/public
 /cm-super/sfsx2074.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti0800.p
 fb></usr/share/texmf/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on F09_Laborbuch.pdf (24 pages, 15367837 bytes).
+Output written on F09_Laborbuch.pdf (24 pages, 15391004 bytes).
 PDF statistics:
- 856 PDF objects out of 1000 (max. 8388607)
- 470 compressed objects within 5 object streams
- 126 named destinations out of 1000 (max. 500000)
- 487 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 861 PDF objects out of 1000 (max. 8388607)
+ 474 compressed objects within 5 object streams
+ 128 named destinations out of 1000 (max. 500000)
+ 492 words of extra memory for PDF output out of 10000 (max. 10000000)
 

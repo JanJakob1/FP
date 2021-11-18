@@ -761,6 +761,10 @@ Interpret the correlation between firing rates and CVs:
 CV größer --> rate kleiner
 größere Abweichungen, dann wird manchmal der Threshold nicht überschritten und die chain bricht ab.
 
+Wir sehen ein antiproportionales Verhalten zwischen dem CV -Wert und der Feuerrate
+Leckspannung > Schwellenspannung --> ohne synaptische Verbindungen gleichmäßige hohe Feuerrate
+Bei kleinem CV, also kleiner Streuung verändert sich nicht viel durch die inhibitorischen Verbindungen
+nur bei Stärkerer Streuung passiert es öfter, dass die Schwellenspannung nicht mehr überschritten wird und damit ein Neuron nicht feuert, wodurch die Feuerrate kleiner wird
 
 
 \subsection{Aufgabe 2}
@@ -802,43 +806,62 @@ w = 2, k = 10
 Im letzten Versuchsteil soll ein XOR-Gatter implementiert werden.
 
 \subsection{Aufgabe 1}
-Wir nehmen an, dass alle Neuronen funktionieren und jeder Eingangsimpuls löst genau eine Ausgangsimpuls aus.Draw a network circuit diagram.
-smaller network --> Lukas
-
-\subsection{Aufgabe 2}
-In the network from Figure 16: Which are the most sensitive connections? How could
-we make the network more robust? Compare this to subsection 4.5.
-Lukas
-
-\subsection{Aufgabe 3}
-xor Y2Hw = 2 I2Yw = 2 Y2Hi = 15H2Ow = 4 
-Find a set of weights I2Yw, Y2Hw, Y2Hi and H2Ow in the script.
-Hint: Find a working point for I2Yw first, then Y2Hw and finally Y2Hi and H2Ow.
-Can you reproduce the behavior shown in Figure 17?
-Comment: If a population consistently fails to produce the correct behavior you can
-move it to other physical neurons by adding it to skip if unreliable list.
+Wir nehmen an, dass alle Neuronen funktionieren und jeder Eingangsimpuls löst genau eine Ausgangsimpuls aus. In einem perfekten System bräuchte man die hemmenden Neuronen also nicht, um zu verhindern, dass es ein Doppelfeuern geben kann. Man bräuchte sie nur, um zu verhindern, dass ein Signal weitergegeben wird, wenn beide Input-Neuronen y1 und y2 feuern.
 
 \begin{figure} [ht]
 \begin{center}
 \label{fig:abb4}
-\caption{Feuerrate in Abhängigkeit der CVs}
+\caption{Simples XOR-Gate}
+\includegraphics[scale=0.45]{pictures/xor_gatter.png}
+\end{center}
+\end{figure}
+
+
+\subsection{Aufgabe 2}
+Die Verbindungen zwischen der y und h-Schicht sind die sensitivsten Verbindungen. Hier müssen die inhibitorischen Neuronen, die auf h1 und h2 wirken, das Signal der exhibitorischen Neuronen perfekt unterdrücken, falls dieses auch Feuern. Durch eine größere Population könnten wir das Netzwerk robuster machen.
+
+
+\subsection{Aufgabe 3}
+Mit den Paramtern
+
+\begin{table}[H]
+\centering
+\captionsetup{justification=centering}
+\caption{Gewichte für XOR-Gatter}
+\begin{tabular}{l|l}
+ Gewicht&Wert\\
+\hline
+I2Yw&2\\
+Y2Hw&2\\
+Y2Hi&15\\
+H2Ow&4
+\end{tabular}
+\label{tab:08}
+\end{table}
+
+\noindent erhalten wir das in \ref{fig:abb42} dargestellte Verhalten. Leider konnten wir nicht die richtigen Paramter finden um das richtige Verhalten eines XOR-Gatters zu reproduzieren. Wie man an Hand der Abbildung erkennt, scheint das Problem bei dem Gewicht Y2Hi zu liegen. Sowohl bei y1 als auch bei y2 kommt ein Input-Spike an und diese beiden Spikes werden direkt an h1 und h2 (und damit an o) weitergereicht. Die Unterdrückung dieser beiden Spikes scheint mit unserem gewählten Parameter-Setting nicht zu funktionieren. 
+
+\newpage
+
+\begin{figure} [ht]
+\begin{center}
+\label{fig:abb42}
+\caption{Verhalten des XOR-Gates mit Gewichten aus Tabelle 8}
 \includegraphics[scale=0.45]{pictures/aufgabe7_3.png}
 \end{center}
 \end{figure}
 
-
 \subsection{Aufgabe 4}
-What do you expect to happen if there is some jitter on the input? Check the classifi-
-cation rate (correct outputs as a fraction of presented inputs) for different amounts of
-jitter.
+Im letzten Aufgabenteil haben wir die Klassifizierungsrate (classification rate) mit Jitter (Störungen in der Frequenz) untersucht.
 
 \begin{figure} [ht]
 \begin{center}
-\label{fig:abb4}
-\caption{Feuerrate in Abhängigkeit der CVs}
+\label{fig:abb43}
+\caption{XOR-Gate mit Jitter}
 \includegraphics[scale=0.45]{pictures/jitter_plot_lang.png}
 \end{center}
 \end{figure}
 
+\noindent Man erkennt, dass mit höheren Jitter-Werten die Genauigkeit sinkt. Die Ursache hierfür sind verzögerte Signale, die den Sperrmechanismus verursacht durch die inhibitorischen Neuronen umgehen. Eine Lösung wäre, mehrere Signale auszusenden und das am häufigsten beobachtete Ereignis zu nehmen. Diesen Vorgang könnte man auch in den Versuch mitaufnehmen.
 
 \end{document}
